@@ -1,0 +1,38 @@
+package page;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import code.PageElement;
+import code.WaitType;
+
+public class Homepage extends WebPage{
+	private PageElement hotel;
+	
+	
+	
+
+	public Homepage(WebDriver driver, String pagename) {
+		super(driver,pagename);
+		
+		hotel=new PageElement(By.xpath("//a[contains(text(),'HOTELS ')]"),"Hotel", false, WaitType.WAITFORELEMENTTOBEDISPLAYED,10);
+		
+	}
+		
+
+	
+
+	public void Home() {
+		click(hotel);
+		
+	
+	}
+
+
+
+
+	private void click(PageElement hotel2) {
+		// TODO Auto-generated method stub
+		
+	}
+}

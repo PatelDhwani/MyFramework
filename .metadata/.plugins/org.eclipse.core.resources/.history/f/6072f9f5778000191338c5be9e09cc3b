@@ -1,0 +1,13 @@
+package page;
+
+import org.openqa.selenium.WebDriver;
+
+public abstract class WebPage {
+
+	public WebPage(WebDriver driver, String pagename) {
+	}
+
+
+	}
+
+

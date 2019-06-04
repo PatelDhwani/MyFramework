@@ -1,0 +1,54 @@
+package code;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class PageElement {
+
+	private By by;
+	private int timeOut;
+	private String fieldname;
+	 WaitType wateType;
+
+	
+
+	public PageElement(By xpath, String string, boolean b, WaitType waitforelementtobedisplayed, int i) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public WaitType getWaitType() {
+		
+		return wateType;
+	}
+
+	public By getBy() {
+		
+		return by;
+	}
+
+	public int getTimeOut() {
+		
+		return timeOut;
+	}
+
+	public String getName() {
+		
+		return fieldname;
+	}
+
+	public WebElement getWebElement() {
+		
+		return null;
+	}
+
+	public boolean isSlowLoadableComponent() {
+	
+		return false;
+	}
+
+	public Object getWebElement1() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

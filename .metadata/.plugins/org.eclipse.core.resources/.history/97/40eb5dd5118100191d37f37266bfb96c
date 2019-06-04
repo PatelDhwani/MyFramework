@@ -1,0 +1,9 @@
+package code;
+
+public abstract class WebPage {
+
+	public WebPage() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

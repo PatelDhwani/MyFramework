@@ -1,0 +1,25 @@
+package page;
+
+import org.openqa.selenium.WebDriver;
+
+import code.PageElement;
+
+public class Homepage extends WebPage{
+	private PageElement hotel;
+	
+	
+	
+
+	public Homepage(WebDriver driver, String pagename) {
+		super(driver,pagename);
+		
+	}
+		
+
+	
+
+	public void Home() {
+		
+	}
+
+}

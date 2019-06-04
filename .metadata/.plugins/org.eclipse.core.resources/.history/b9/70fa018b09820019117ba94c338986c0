@@ -1,0 +1,19 @@
+package page;
+
+import org.openqa.selenium.WebDriver;
+
+public class Homepage extends WebPage{
+
+	public Homepage(WebDriver driver, String pagename) {
+		super(driver,pagename);
+		
+	}
+		
+
+	
+
+	public void Home() {
+		
+	}
+
+}

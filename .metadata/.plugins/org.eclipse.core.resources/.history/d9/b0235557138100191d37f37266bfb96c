@@ -1,0 +1,20 @@
+package code;
+
+public class PageElement {
+
+	public int getWaitType() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Object getBy() {
+		
+		return null;
+	}
+
+	public int getTimeOut() {
+		
+		return timeOut;
+	}
+
+}

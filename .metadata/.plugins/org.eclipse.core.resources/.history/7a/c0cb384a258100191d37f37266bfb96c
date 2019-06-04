@@ -1,0 +1,44 @@
+package code;
+
+import java.util.concurrent.TimeoutException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public abstract class WebPage {
+
+	
+	 protected WebDriver driver;
+	public WebPage(WebDriver driver, String pagename) {
+		
+	}
+	private WebElement waitForElementAndReturnElement(PageElement pageElement) {
+		Object pageName;
+		switch (pageElement.getWaitType()) {
+		case WAITFORELEMENTTOBECLICKABLE:
+			try {
+				return WebDriverWrapper.waitForElementToBeClickable(pageElement.getBy(), pageElement.getTimeOut());
+			} catch (TimeoutException e) {
+				throw new ScriptExecutionException ();
+			}
+
+		case WAITFORELEMENTTOBEEENABLED:
+			try {
+				return WebDriverWrapper.waitForElementToBeEnabled(pageElement.getBy(), pageElement.getTimeOut());
+			} catch (TimeoutException e) {
+				throw new ScriptExecutionException ();
+			}
+
+		case WAITFORELEMENTTOBEDISPLAYED:
+			try {
+				return WebDriverWrapper.waitForElementToBeDisplayed(pageElement.getBy(), pageElement.getTimeOut());
+			} catch (TimeoutException e) {
+				throw new ScriptExecutionException (pageElement.getName() + " was not displayed in specified wait time "+ pageElement.getTimeOut(), e,pageName);
+			}
+
+		default:
+			return driver.findElement(pageElement.getBy());
+		}
+	}
+
+}

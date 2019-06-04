@@ -1,0 +1,24 @@
+package code;
+
+import org.openqa.selenium.By;
+
+public class PageElement {
+
+	private By by;
+
+	public int getWaitType() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public By getBy() {
+		
+		return by;
+	}
+
+	public int getTimeOut() {
+		
+		return timeOut;
+	}
+
+}
